@@ -6,10 +6,17 @@ import pandas as pd
 data={}
 def SymptomSelection():
     # Dropdown menus for symptoms
-    symptom1= st.selectbox("Symptom 1", ["Select a Symptom"]+symptoms)
-    symptom2= st.selectbox("Symptom 2", ["Select a Symptom"]+symptoms)
-    symptom3= st.selectbox("Symptom 3", ["Select a Symptom"]+symptoms)
-    symptom4= st.selectbox("Symptom 4", ["Select a Symptom"]+symptoms)
+    first,second = st.columns(2)
+    with first:
+      symptom1= st.selectbox("Symptom 1", ["Select a Symptom"]+symptoms)  
+    with second:
+       symptom2= st.selectbox("Symptom 2", ["Select a Symptom"]+symptoms)
+    third,fourth = st.columns(2)
+    with third:
+      symptom3= st.selectbox("Symptom 3", ["Select a Symptom"]+symptoms)
+    with fourth:
+      symptom4= st.selectbox("Symptom 4", ["Select a Symptom"]+symptoms)
+      
     symptom5= st.selectbox("Symptom 5", ["Select a Symptom"]+symptoms)
 
 
